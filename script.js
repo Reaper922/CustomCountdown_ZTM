@@ -86,7 +86,7 @@ function reset() {
 }
 
 function restorePreviousCountdown() {
-    IdleDeadline(localStorage.getItem('countdown')) {
+    if(localStorage.getItem('countdown')) {
         inputContainer.hidden = true;
         savedCountdown = JSON.parse(localStorage.getItem('countdown'));
         countdownTitle = savedCountdown.title;
